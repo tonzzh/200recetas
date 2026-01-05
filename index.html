@@ -2509,7 +2509,7 @@
 							<div class="e-con-inner">
 								<div class="elementor-element elementor-element-7564caf7 elementor-widget elementor-widget-html"
 									data-id="7564caf7" data-element_type="widget" data-widget_type="html.default">
-									<script> jQuery(document).ready(function ($) { var delay = 100; setTimeout(function () { $('.elementor-tab-title').removeClass('elementor-active'); $('.elementor-tab-content').css('display', 'none'); }, delay); }); </script>
+									<script> document.addEventListener('DOMContentLoaded', function () { jQuery(document).ready(function ($) { var delay = 100; setTimeout(function () { $('.elementor-tab-title').removeClass('elementor-active'); $('.elementor-tab-content').css('display', 'none'); }, delay); }); }); </script>
 								</div>
 								<div class="elementor-element elementor-element-a76a9c9 elementor-widget__width-initial elementor-widget elementor-widget-heading"
 									data-id="a76a9c9" data-element_type="widget" data-widget_type="heading.default">
@@ -3067,7 +3067,7 @@
 			<script src="js/hooks.min.js" id="wp-hooks-js" defer></script>
 			<script src="js/i18n.min.js" id="wp-i18n-js" defer></script>
 			<script id="wp-i18n-js-after">
-				wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+				document.addEventListener('DOMContentLoaded', function () { wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] }); });
 			</script>
 			<script id="elementor-pro-frontend-js-before">
 				var ElementorProFrontendConfig = { "ajaxurl": "", "nonce": "b166dcf08d", "urls": { "assets": "", "rest": "" }, "settings": { "lazy_load_background_images": true }, "popup": { "hasPopUps": false }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" }, "x-twitter": { "title": "X" }, "threads": { "title": "Threads" } }, "facebook_sdk": { "lang": "pt_BR", "app_id": "" }, "lottie": { "defaultAnimationUrl": "" } };
