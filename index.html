@@ -2843,7 +2843,7 @@
 							<div class="e-con-inner">
 								<div class="elementor-element elementor-element-7564caf7 elementor-widget elementor-widget-html"
 									data-id="7564caf7" data-element_type="widget" data-widget_type="html.default">
-									<script> document.addEventListener('DOMContentLoaded', function () { jQuery(document).ready(function ($) { var delay = 100; setTimeout(function () { $('.elementor-tab-title').removeClass('elementor-active'); $('.elementor-tab-content').css('display', 'none'); }, delay); }); }); </script>
+									<script> document.addEventListener('DOMContentLoaded', function () { var delay = 100; setTimeout(function () { document.querySelectorAll('.elementor-tab-title').forEach(function (el) { el.classList.remove('elementor-active'); }); document.querySelectorAll('.elementor-tab-content').forEach(function (el) { el.style.display = 'none'; }); }, delay); }); </script>
 								</div>
 								<div class="elementor-element elementor-element-a76a9c9 elementor-widget__width-initial elementor-widget elementor-widget-heading"
 									data-id="a76a9c9" data-element_type="widget" data-widget_type="heading.default">
@@ -3244,7 +3244,7 @@
 													const widget = el.querySelector('.elementor-widget');
 													if (!widget) return;
 													widget.classList.remove('sliding');
-													
+
 													const container = el.querySelector('.elementor-widget-container');
 													if (!container) return;
 													const containerWidth = container.offsetWidth;
