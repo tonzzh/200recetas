@@ -9,8 +9,8 @@
     // ============================================================
     // CONFIGURAÇÕES SUPABASE
     // ============================================================
-    const SUPABASE_URL  = 'https://wonzdrykzwxlavsyleux.supabase.co';
-    const ANON_KEY      = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indvbnpkcnlrend4bGF2c3lsZXV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MjI3NDcsImV4cCI6MjA5NzE5ODc0N30.7LM9VNtLgWVRzhobSF5aP9NzKCeSlTzo0aa9YCxwgns';
+    const SUPABASE_URL  = 'https://gnrebmaxrnncqtfnabng.supabase.co';
+    const ANON_KEY      = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImducmVibWF4cm5uY3F0Zm5hYm5nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4MDc0MTUsImV4cCI6MjA5NzM4MzQxNX0.JgT8e70f4X5qeSITRsxoqPEJemPSnfqA_rpGAfWGlcQ';
 
     const BASE_HEADERS = {
         'Content-Type': 'application/json',
