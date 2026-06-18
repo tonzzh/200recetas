@@ -1,5 +1,5 @@
 # ============================================================
-# robots.txt — ReceitasZero
+# robots.txt — RecetasZero
 # ============================================================
 
 # Permitir tudo para buscadores principais
@@ -58,4 +58,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://receitaszero.vercel.app/sitemap.xml
+Sitemap: https://postresdelaabuela.vercel.app/sitemap.xml
