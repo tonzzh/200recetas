@@ -9,8 +9,8 @@
     // ============================================================
     // CONFIGURAÇÕES SUPABASE
     // ============================================================
-    const SUPABASE_URL  = 'https://gnrebmaxrnncqtfnabng.supabase.co';
-    const ANON_KEY      = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImducmVibWF4cm5uY3F0Zm5hYm5nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4MDc0MTUsImV4cCI6MjA5NzM4MzQxNX0.JgT8e70f4X5qeSITRsxoqPEJemPSnfqA_rpGAfWGlcQ';
+    const SUPABASE_URL = 'https://gnrebmaxrnncqtfnabng.supabase.co';
+    const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImducmVibWF4cm5uY3F0Zm5hYm5nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4MDc0MTUsImV4cCI6MjA5NzM4MzQxNX0.JgT8e70f4X5qeSITRsxoqPEJemPSnfqA_rpGAfWGlcQ';
 
     const BASE_HEADERS = {
         'Content-Type': 'application/json',
@@ -47,35 +47,35 @@
     function getBotName(ua) {
         if (!ua) return 'Unknown Bot';
         const patterns = [
-            [/googlebot/i,              'Googlebot'],
-            [/bingbot/i,               'Bingbot'],
-            [/yandexbot/i,             'YandexBot'],
-            [/baiduspider/i,           'Baiduspider'],
-            [/duckduckbot/i,           'DuckDuckBot'],
-            [/ahrefsbot/i,             'AhrefsBot'],
-            [/semrushbot/i,            'SemrushBot'],
-            [/lighthouse/i,            'Google Lighthouse'],
-            [/pagespeed/i,             'PageSpeed'],
-            [/puppeteer/i,             'Puppeteer'],
-            [/selenium/i,              'Selenium'],
-            [/playwright/i,            'Playwright'],
-            [/headless/i,              'Headless Browser'],
-            [/python-requests/i,       'Python Requests'],
-            [/curl/i,                  'cURL'],
-            [/wget/i,                  'Wget'],
+            [/googlebot/i, 'Googlebot'],
+            [/bingbot/i, 'Bingbot'],
+            [/yandexbot/i, 'YandexBot'],
+            [/baiduspider/i, 'Baiduspider'],
+            [/duckduckbot/i, 'DuckDuckBot'],
+            [/ahrefsbot/i, 'AhrefsBot'],
+            [/semrushbot/i, 'SemrushBot'],
+            [/lighthouse/i, 'Google Lighthouse'],
+            [/pagespeed/i, 'PageSpeed'],
+            [/puppeteer/i, 'Puppeteer'],
+            [/selenium/i, 'Selenium'],
+            [/playwright/i, 'Playwright'],
+            [/headless/i, 'Headless Browser'],
+            [/python-requests/i, 'Python Requests'],
+            [/curl/i, 'cURL'],
+            [/wget/i, 'Wget'],
             // Facebook Ads / Meta
-            [/adsbot-facebook/i,           'Facebook AdsBot'],
-            [/facebookcatalog/i,           'Facebook Catalog Bot'],
-            [/meta-externalagent/i,        'Meta ExternalAgent'],
-            [/meta-externalfetcher/i,      'Meta ExternalFetcher'],
-            [/facebookexternalhit/i,       'Facebook Link Preview'],
-            [/facebookbot/i,               'FacebookBot'],
-            [/facebot/i,                   'Facebot'],
-            [/facebook/i,                  'Facebook Bot'],
+            [/adsbot-facebook/i, 'Facebook AdsBot'],
+            [/facebookcatalog/i, 'Facebook Catalog Bot'],
+            [/meta-externalagent/i, 'Meta ExternalAgent'],
+            [/meta-externalfetcher/i, 'Meta ExternalFetcher'],
+            [/facebookexternalhit/i, 'Facebook Link Preview'],
+            [/facebookbot/i, 'FacebookBot'],
+            [/facebot/i, 'Facebot'],
+            [/facebook/i, 'Facebook Bot'],
             // Instagram / WhatsApp
-            [/igexternalfetcher/i,         'Instagram Fetcher'],
-            [/instagram/i,                 'Instagram Bot'],
-            [/whatsapp/i,                  'WhatsApp Bot'],
+            [/igexternalfetcher/i, 'Instagram Fetcher'],
+            [/instagram/i, 'Instagram Bot'],
+            [/whatsapp/i, 'WhatsApp Bot'],
         ];
         for (const [pat, name] of patterns) {
             if (pat.test(ua)) return name;
@@ -94,19 +94,19 @@
             : 'Desktop';
 
         let browser = 'Unknown';
-        if (/Edg\//i.test(ua))                                    browser = 'Edge';
-        else if (/OPR\/|Opera/i.test(ua))                         browser = 'Opera';
-        else if (/Chrome\//i.test(ua) && !/Chromium/i.test(ua))   browser = 'Chrome';
-        else if (/Firefox\//i.test(ua))                            browser = 'Firefox';
-        else if (/Safari\//i.test(ua) && !/Chrome/i.test(ua))     browser = 'Safari';
-        else if (/Trident\/|MSIE/i.test(ua))                       browser = 'Internet Explorer';
+        if (/Edg\//i.test(ua)) browser = 'Edge';
+        else if (/OPR\/|Opera/i.test(ua)) browser = 'Opera';
+        else if (/Chrome\//i.test(ua) && !/Chromium/i.test(ua)) browser = 'Chrome';
+        else if (/Firefox\//i.test(ua)) browser = 'Firefox';
+        else if (/Safari\//i.test(ua) && !/Chrome/i.test(ua)) browser = 'Safari';
+        else if (/Trident\/|MSIE/i.test(ua)) browser = 'Internet Explorer';
 
         let os = 'Unknown';
-        if (/Windows/i.test(ua))           os = 'Windows';
-        else if (/Mac OS X/i.test(ua))     os = 'macOS';
-        else if (/Android/i.test(ua))      os = 'Android';
+        if (/Windows/i.test(ua)) os = 'Windows';
+        else if (/Mac OS X/i.test(ua)) os = 'macOS';
+        else if (/Android/i.test(ua)) os = 'Android';
         else if (/iPhone|iPad|iPod/i.test(ua)) os = 'iOS';
-        else if (/Linux/i.test(ua))        os = 'Linux';
+        else if (/Linux/i.test(ua)) os = 'Linux';
 
         return { device, browser, os };
     }
@@ -163,42 +163,54 @@
     // ============================================================
     async function getGeoInfo() {
         const apis = [
-            // API 1: ipapi.co (HTTPS)
+            // API 1: freeipapi.com (CORS enabled, highly stable)
             async () => {
-                const r = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(4000) });
+                const r = await fetch('https://free.freeipapi.com/api/json', { signal: AbortSignal.timeout(4000) });
                 if (!r.ok) throw new Error();
                 const d = await r.json();
-                if (!d.ip || d.error) throw new Error();
-                return { ip: d.ip || null, country: d.country_name || null, country_code: d.country_code || null, city: d.city || null, region: d.region || null, org: d.org || null };
+                if (!d.ipAddress) throw new Error();
+                return {
+                    ip: d.ipAddress || null,
+                    country: d.countryName || null,
+                    country_code: d.countryCode || null,
+                    city: d.cityName || null,
+                    region: d.regionName || null,
+                    org: d.asnOrganization || null
+                };
             },
-            // API 2: ipwho.is (HTTPS, fallback)
+            // API 2: geojs.io (CORS enabled, highly stable fallback)
             async () => {
-                const r = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(4000) });
+                const r = await fetch('https://get.geojs.io/v1/ip/geo.json', { signal: AbortSignal.timeout(4000) });
                 if (!r.ok) throw new Error();
                 const d = await r.json();
-                if (!d.success) throw new Error();
-                return { ip: d.ip || null, country: d.country || null, country_code: d.country_code || null, city: d.city || null, region: d.region || null, org: d.connection?.org || null };
+                if (!d.ip) throw new Error();
+                return {
+                    ip: d.ip || null,
+                    country: d.country || null,
+                    country_code: d.country_code || null,
+                    city: d.city || null,
+                    region: d.region || null,
+                    org: d.organization_name || null
+                };
             },
-            // API 3: ipinfo.io (HTTPS, fallback — funciona em in-app browsers)
+            // API 3: ipinfo.io (CORS enabled, stable fallback)
             async () => {
                 const r = await fetch('https://ipinfo.io/json', { signal: AbortSignal.timeout(4000) });
                 if (!r.ok) throw new Error();
                 const d = await r.json();
                 if (!d.ip) throw new Error();
-                // ipinfo retorna: country="BR", region="São Paulo", city="São Paulo"
-                return { ip: d.ip || null, country: null, country_code: d.country || null, city: d.city || null, region: d.region || null, org: d.org || null };
-            },
-            // API 4: freeipapi.com (HTTPS, segundo fallback)
-            async () => {
-                const r = await fetch('https://freeipapi.com/api/json', { signal: AbortSignal.timeout(4000) });
-                if (!r.ok) throw new Error();
-                const d = await r.json();
-                if (!d.ipAddress) throw new Error();
-                return { ip: d.ipAddress || null, country: d.countryName || null, country_code: d.countryCode || null, city: d.cityName || null, region: d.regionName || null, org: null };
+                return {
+                    ip: d.ip || null,
+                    country: null,
+                    country_code: d.country || null,
+                    city: d.city || null,
+                    region: d.region || null,
+                    org: d.org || null
+                };
             },
         ];
         for (const api of apis) {
-            try { return await api(); } catch (_) {}
+            try { return await api(); } catch (_) { }
         }
         return { ip: null, country: null, country_code: null, city: null, region: null, org: null };
     }
@@ -207,41 +219,59 @@
     // REGISTRAR VISITA
     // ============================================================
     async function trackVisit() {
-        const ua           = navigator.userAgent;
-        const botDetected  = isBot(ua);
+        const ua = navigator.userAgent;
+        const botDetected = isBot(ua);
         const { device, browser, os } = getDeviceInfo();
-        const sessionId    = getSessionId();
-
-        // Geolocalização com fallback automático
-        const { ip, country, country_code, city, region, org } = await getGeoInfo();
+        const sessionId = getSessionId();
 
         const record = {
-            id:           sessionId,
-            type:         botDetected ? 'bot' : 'human',
-            bot_name:     botDetected ? getBotName(ua) : null,
+            id: sessionId,
+            type: botDetected ? 'bot' : 'human',
+            bot_name: botDetected ? getBotName(ua) : null,
             ua,
             device,
             browser,
             os,
-            referrer:     document.referrer || 'direct',
-            page:         location.pathname,
-            screen_w:     screen.width,
-            screen_h:     screen.height,
-            lang:         navigator.language,
-            ip,
-            country,
-            country_code,
-            city,
-            region,
-            org,
+            referrer: document.referrer || 'direct',
+            page: location.pathname,
+            screen_w: screen.width,
+            screen_h: screen.height,
+            lang: navigator.language,
+            ip: null,
+            country: null,
+            country_code: null,
+            city: null,
+            region: null,
+            org: null,
             time_on_page: 0,
-            clicks:       0,
+            clicks: 0,
             scroll_depth: 0,
         };
 
+        // Salva a visita imediatamente no Supabase
         try {
             await sbUpsert('visits', record);
         } catch (_) { /* falha silenciosa */ }
+
+        // Busca geolocalização em segundo plano e atualiza o registro
+        getGeoInfo().then(async (geo) => {
+            if (geo.ip) {
+                try {
+                    await sbPatch(
+                        'visits',
+                        `id=eq.${encodeURIComponent(sessionId)}`,
+                        {
+                            ip: geo.ip,
+                            country: geo.country,
+                            country_code: geo.country_code,
+                            city: geo.city,
+                            region: geo.region,
+                            org: geo.org
+                        }
+                    );
+                } catch (_) { /* falha silenciosa */ }
+            }
+        });
 
         return sessionId;
     }
@@ -251,11 +281,26 @@
     // ============================================================
     function trackEngagement(sessionId) {
         const startTime = Date.now();
-        let maxScroll   = 0;
-        let clicks      = 0;
+        let maxScroll = 0;
+        let clicks = 0;
+
+        // Variáveis de controle para evitar atualizações duplicadas com os mesmos dados
+        let lastSavedTime = -1;
+        let lastSavedScroll = -1;
+        let lastSavedClicks = -1;
 
         async function pushUpdate(keepalive = false) {
             const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+
+            // Só envia a requisição se algum dado mudou desde o último envio
+            if (timeOnPage === lastSavedTime && maxScroll === lastSavedScroll && clicks === lastSavedClicks) {
+                return;
+            }
+
+            lastSavedTime = timeOnPage;
+            lastSavedScroll = maxScroll;
+            lastSavedClicks = clicks;
+
             try {
                 await sbPatch(
                     'visits',
@@ -263,15 +308,20 @@
                     { time_on_page: timeOnPage, scroll_depth: maxScroll, clicks },
                     keepalive
                 );
-            } catch (_) {}
+            } catch (_) { }
         }
 
-        // Profundidade de scroll
+        // Profundidade de scroll suavizada (Throttling de 200ms)
+        let scrollTimeout = null;
         window.addEventListener('scroll', () => {
-            const pct = Math.round(
-                ((window.scrollY + window.innerHeight) / document.body.scrollHeight) * 100
-            );
-            if (pct > maxScroll) maxScroll = Math.min(pct, 100);
+            if (scrollTimeout) return;
+            scrollTimeout = setTimeout(() => {
+                scrollTimeout = null;
+                const pct = Math.round(
+                    ((window.scrollY + window.innerHeight) / document.body.scrollHeight) * 100
+                );
+                if (pct > maxScroll) maxScroll = Math.min(pct, 100);
+            }, 200);
         }, { passive: true });
 
         // Cliques — detecta CTAs
@@ -280,24 +330,24 @@
             const target = e.target.closest('a, button');
             if (!target) return;
 
-            const href  = target.href || '';
-            const text  = (target.innerText || '').trim().slice(0, 80);
+            const href = target.href || '';
+            const text = (target.innerText || '').trim().slice(0, 80);
             const isCTA = /quero|comprar|garantir|pegar|acessar|pedido|oferta/i.test(text);
 
             const isAffiliate = href.includes('hotmart') ||
-                                 href.includes('kiwify')  ||
-                                 href.includes('eduzz')   ||
-                                 href.includes('monetizze');
+                href.includes('kiwify') ||
+                href.includes('eduzz') ||
+                href.includes('monetizze');
 
             if (isCTA || isAffiliate) {
                 try {
                     await sbInsert('events', {
                         session_id: sessionId,
-                        type:       'cta_click',
-                        label:      text.slice(0, 60),
-                        href:       href.slice(0, 200),
+                        type: 'cta_click',
+                        label: text.slice(0, 60),
+                        href: href.slice(0, 200),
                     });
-                } catch (_) {}
+                } catch (_) { }
             }
         });
 
@@ -313,12 +363,9 @@
 
         // beforeunload + pagehide como backup (desktop e alguns Androids)
         window.addEventListener('beforeunload', () => { clearInterval(interval); pushUpdate(true); });
-        window.addEventListener('pagehide',     () => { clearInterval(interval); pushUpdate(true); });
+        window.addEventListener('pagehide', () => { clearInterval(interval); pushUpdate(true); });
     }
 
-    // ============================================================
-    // INICIALIZAÇÃO
-    // ============================================================
     async function init() {
         try {
             const sessionId = await trackVisit();
